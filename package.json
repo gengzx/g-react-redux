@@ -43,7 +43,7 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.5.5",
     "webpack-dashboard": "^1.0.0-5",
-    "webpack-dev-server": "^2.7.1",
+    "webpack-dev-server": "^3.1.11",
     "webpack-jarvis": "^0.2.2"
   }
 }

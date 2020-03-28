@@ -4,17 +4,14 @@
 
     global.config = {
         app: {
-            title: '油气资源管理和战略研究支撑服务平台',
-            description: '油气资源管理和战略研究支撑服务平台',
-            keywords: '石大正信,油气资源管理和战略研究支撑服务平,资料服务',
+            title: 'XXX 系统',
+            description: 'XXX 系统描述',
+            keywords: 'gengzx,react',
             version:'1.0.7'
         },
-        debug:false,
-        ssoUserName:'baiy'
-        //ssoUserName:ssoUserName
+        debug:false
     }
 
-    global.WMC = "http://127.0.0.1:8083/WMC";
     global.SERVICE_URL = "http://127.0.0.1:8080/IGPF";
 /*
     global.SERVICE_URL = {

@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 
 
 import { action } from 'action/explore';
-import { action as ShareModalAction } from 'action/ShareModal';
-
 
 import './Default.less';
 
@@ -53,6 +51,6 @@ class Default extends Component {
 
 export default connect(
     state => state.explore,
-    Object.assign({}, action, ShareModalAction)
+    Object.assign({}, action)
 )(Default);
 

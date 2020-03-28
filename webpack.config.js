@@ -154,7 +154,7 @@ module.exports = {
     }),
     new ExtractTextPlugin('[name].[chunkhash:8].css'),
     new HtmlWebpackPlugin({ 
-      title: '油气中心一体化智慧工作平台',
+      title: 'XX 系统',
       filename: 'index.html',
       favicon: './static/images/favicon.ico',
       template: './src/index.html'

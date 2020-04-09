@@ -4,15 +4,16 @@ const webpack = require('webpack');
 const baseWebpackConfig = require('./webpack.config');
 
 // 清除打包路径
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 baseWebpackConfig.plugins.push(
-  new CleanWebpackPlugin([baseWebpackConfig.output.path]),
+  new CleanWebpackPlugin(),
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: '"production"'
     }
-  }),
+  })
+  /*
   new webpack.optimize.UglifyJsPlugin({
     beautify: false,
     comments: false,
@@ -22,7 +23,7 @@ baseWebpackConfig.plugins.push(
         collapse_vars: true,
         reduce_vars: true
     }
-  })
+  })*/
   //new webpack.optimize.OccurenceOrderPlugin()
 )
 

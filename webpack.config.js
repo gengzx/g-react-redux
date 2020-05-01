@@ -56,8 +56,8 @@ module.exports = {
 		pathinfo: true,
 		path: dist,
 		//publicPath: '/build/',
-		filename: 'script/[name].bundle.[chunkhash:8].js',
-		chunkFilename: 'script/chunks/[name]-[id]-[chunkhash:8].js' // 按需加载
+		filename: 'script/[name].[chunkhash:8].js',
+		chunkFilename: 'script/chunks/[name].[chunkhash:8].js' // 按需加载
 	},
 	// 加载器
 	module: {
@@ -180,8 +180,8 @@ module.exports = {
 
 		//  new ExtractTextPlugin('[name].[chunkhash:8].css'),
 		new MiniCssExtractPlugin({
-			filename: "[name].[chunkhash:8].css",
-			chunkFilename: "[name].[chunkhash:8].css"
+			filename: "css/[name].[chunkhash:8].css",
+			chunkFilename: "css/[name].[chunkhash:8].css"
 		}),
 
 		new HtmlWebpackPlugin({

@@ -9,7 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode development --config webpack.config.dev.js",
-    "build": "webpack --mode production --config webpack.config.prod.js --progress --hide-modules"
+    "build": "webpack --mode production --config webpack.config.prod.js --progress --hide-modules",
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "react": "^16.13.1",
@@ -24,6 +26,11 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-storysource": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "autoprefixer": "^9.7.6",
     "babel-loader": "^8.1.0",
     "babel-plugin-import": "^1.13.0",

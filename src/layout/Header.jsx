@@ -4,6 +4,7 @@
 import React from 'react'
 
 import './Header.less';
+import classNames from 'classnames';
 import { Ajax, Api } from 'Ajax'
 
 class Header extends React.Component {
@@ -39,7 +40,7 @@ class Header extends React.Component {
 	render() {
 
 		return (
-            <div className="page-header">
+            <div className={classNames("page-header")}>
        
 
             </div>

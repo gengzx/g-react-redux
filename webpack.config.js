@@ -76,11 +76,11 @@ module.exports = {
 				use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader"]
 			},
 			{
-				// 加载 本地之外 less文件 (不使用css modules)
+				// 加载 less文件 (不使用css modules)
 				test: /\.less$/,
 				//loader: 'style-loader!css-loader!less-loader'
 				//loader:ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!less-loader' })
-				use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader", "less-loader"]
+				use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader", "less-loader", "postcss-loader"]
 			}
 			, {
 				// 加载外其他文件

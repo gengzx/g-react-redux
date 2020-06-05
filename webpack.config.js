@@ -186,7 +186,7 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
-			title: 'XX 系统',
+			title: 'React 脚手架',
 			filename: 'index.html',
 			favicon: './static/images/favicon.ico',
 			template: './src/index.html'

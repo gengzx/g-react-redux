@@ -15,7 +15,7 @@ export default function explore(state = initialState, action = {}) {
         case LOAD:
             return {
                 ...state,
-                data: action.result.rows
+                data: action.result.data
             }
         default:
             return state // 未匹配到的 action 返回原来的 state
@@ -25,7 +25,7 @@ export default function explore(state = initialState, action = {}) {
 // action
 export const action = {
     load() {
-        return { type: LOAD, ajax: (api, cb) => api.loadSpecial({},cb) };
+        return { type: LOAD, ajax: ({ demo }, cb) => demo.loadData({},cb) };
     }
 };
 

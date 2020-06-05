@@ -8,6 +8,8 @@ import { action } from 'action/explore';
 
 import './Default.less';
 
+import { Http } from "utils"
+
 class Default extends Component {
 
 	constructor(props) {
@@ -17,9 +19,13 @@ class Default extends Component {
 	}
 
 	componentDidMount(){
-        
+		 
 
-        //this.props.load();
+		Http.request(`common/find?t=test`,{tbname:"t_sys_unit",cond:``},res => {
+            console.log(res);
+		})
+		
+        this.props.load();
 
 	}
 
@@ -27,7 +33,7 @@ class Default extends Component {
 
 	}
 
-	componentWillReceiveProps(nextProps) {
+	componentDidUpdate(nextProps) {
 
     }
 

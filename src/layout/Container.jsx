@@ -23,7 +23,7 @@ class Container extends React.Component {
      *已加载组件收到新的参数时调用
      */
 
-    componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
 
     }
 

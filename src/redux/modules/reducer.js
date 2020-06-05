@@ -1,7 +1,7 @@
 
 /**
  * 创建配置 Redux Reducer 
- * 根据 action 处理 state 数据
+ * 根据 action 处理 state 数据,接收旧的 state 返回新的 state
  */
 import { combineReducers } from 'redux';
 

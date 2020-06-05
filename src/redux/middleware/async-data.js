@@ -1,6 +1,8 @@
 
 
-import { Api } from 'Ajax'
+import * as Api from '@/api'
+
+
 /**
  * redux 加载异步数据流 中间件
  */

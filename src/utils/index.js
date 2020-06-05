@@ -1,8 +1,9 @@
-const Ajax = require('./Ajax')
+const _u = require('./Util')
+const Http = require('./http')('fetch')
 
 const util = {
-    ...Ajax
-   
+    ..._u,
+    Http
 }
 
 module.exports = util;

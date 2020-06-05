@@ -25,8 +25,8 @@ module.exports = {
 	// 页面入口配置
 	entry: {
 		app: './src/index.js',// 应用加载入口
-		vendor: ['./static/plugins/jquery.min.js'],
-		commons: ['./src/utils/Ajax'] // 提取公共文件
+		//vendor: ['./static/plugins/jquery.min.js'],
+		commons: ['./src/utils'] // 提取公共文件
 	},
 
 	optimization: {
@@ -141,8 +141,9 @@ module.exports = {
 		extensions: ['.js', '.jsx', '.less'],
 		//模块别名定义，方便后续直接引用别名，无须多写长长的地址
 		alias: {
-			Ajax: path.join(__dirname, './src/utils/Ajax'),//后续直接 require('Ajax') 即可
+			'@': path.join(__dirname, './src/'),//@ 指向 src 目录
 			components: path.join(__dirname, './src/components/'),
+			utils: path.join(__dirname, './src/utils'),
 			action: path.join(__dirname, './src/redux/modules'),
 			jquery: path.join(__dirname, './static/plugins/jquery.min.js')
 		}

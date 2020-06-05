@@ -7,12 +7,14 @@ class Bundle extends React.Component {
     mod: null
   }
 
-  componentWillMount() {
+  //componentWillMount() { //react 17.x版本中废弃
+  componentDidMount() {
     // 加载初始状态
     this.load(this.props);
   }
 
-  componentWillReceiveProps(nextProps) {
+  //componentWillReceiveProps(nextProps) { //react 17.x版本中废弃
+  componentDidUpdate(nextProps) {
     if (nextProps.load !== this.props.load) {
       this.load(nextProps);
     }
@@ -44,3 +46,11 @@ Bundle.propTypes = {
 };
 
 export default Bundle;
+
+export const LazyLoad = (Component) => {
+  return (props) => ( 
+    <Bundle load={Component}>
+      {(Container) => <Container {...props}/>}
+    </Bundle>
+  )
+}

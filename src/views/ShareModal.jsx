@@ -29,7 +29,7 @@ class ShareModal extends Component {
 
     componentWillUnmount() {}
 
-    componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
 
     }
 

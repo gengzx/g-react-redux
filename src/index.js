@@ -17,7 +17,7 @@ const initialState = {}
 const store = configureStore(initialState)
 
 require('./config');
-global.$ = global.jQuery = require('jquery');
+//global.$ = global.jQuery = require('jquery');
 
 ReactDOM.render(
     <Provider store={store}>  

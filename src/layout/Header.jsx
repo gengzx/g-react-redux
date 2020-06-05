@@ -5,7 +5,6 @@ import React from 'react'
 
 import './Header.less';
 import classNames from 'classnames';
-import { Ajax, Api } from 'Ajax'
 
 class Header extends React.Component {
 
@@ -20,16 +19,14 @@ class Header extends React.Component {
 
 	componentDidMount() {
         
-        Api.loadSpecial({start:1, limit:8}, result => {
-            this.setState({menus: result.rows});
-        })
+
 	}
 
 	/**
 	 *已加载组件收到新的参数时调用
 	 */
 
-	componentWillReceiveProps(nextProps) {
+	componentDidUpdate(nextProps) {
 
 	}
 

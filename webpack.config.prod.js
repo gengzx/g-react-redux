@@ -39,4 +39,9 @@ baseWebpackConfig.plugins.push(
   //new webpack.optimize.OccurenceOrderPlugin()
 )
 
+if (process.env.npm_config_report) {
+  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  baseWebpackConfig.plugins.push(new BundleAnalyzerPlugin())
+}
+
 module.exports = baseWebpackConfig

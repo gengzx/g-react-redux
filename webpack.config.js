@@ -4,14 +4,12 @@ var path = require('path')
 var webpack = require('webpack')
 var fs = require('fs')
 
-var autoprefixer = require('autoprefixer');
+//var autoprefixer = require('autoprefixer');
 
 // 控制台美化
 // var Dashboard = require('webpack-dashboard');
 // var DashboardPlugin = require('webpack-dashboard/plugin');
 // var _dashboard = new Dashboard();
-
-const Jarvis = require('webpack-jarvis');
 
 //var ExtractTextPlugin = require('extract-text-webpack-plugin'); // webpack 4 被废弃 由 mini-css-extract-plugin 代替
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -41,6 +39,7 @@ module.exports = {
 				},
 				vendor: {
 					name: "vendor",
+					test: /node_modules/,
 					chunks: 'initial',
 					minChunks: Infinity,
 					maxInitialRequests: 5,
@@ -80,7 +79,7 @@ module.exports = {
 				test: /\.less$/,
 				//loader: 'style-loader!css-loader!less-loader'
 				//loader:ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!less-loader' })
-				use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader", "less-loader", "postcss-loader"]
+				use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader", { loader: "less-loader", options: {javascriptEnabled: true} }, "postcss-loader"]
 			}
 			, {
 				// 加载外其他文件
@@ -145,7 +144,7 @@ module.exports = {
 			components: path.join(__dirname, './src/components/'),
 			utils: path.join(__dirname, './src/utils'),
 			action: path.join(__dirname, './src/redux/modules'),
-			jquery: path.join(__dirname, './static/plugins/jquery.min.js')
+			//jquery: path.join(__dirname, './static/plugins/jquery.min.js')
 		}
 	},
 
@@ -153,9 +152,6 @@ module.exports = {
 
 	plugins: [
 
-		new Jarvis({
-			port: 1337 // optional: set a port
-		}),
 
 		// new DashboardPlugin(_dashboard.setData),
 		/*

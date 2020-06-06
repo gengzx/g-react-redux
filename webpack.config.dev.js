@@ -1,6 +1,9 @@
 ﻿'use strict';
 
 var webpack = require('webpack');
+
+const Jarvis = require('webpack-jarvis');
+
 var baseWebpackConfig = require('./webpack.config');
 
 baseWebpackConfig.devServer = {
@@ -14,6 +17,11 @@ baseWebpackConfig.devServer = {
 }
 
 baseWebpackConfig.plugins.push(
+
+  new Jarvis({
+    port: 1337 // optional: set a port
+  }),
+
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: '"development"'

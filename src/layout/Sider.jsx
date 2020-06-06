@@ -2,6 +2,8 @@
 
 import React, { Component } from 'react';
 
+//import './Sider.less';
+
 
 // 应用入口
 class Sider extends Component {

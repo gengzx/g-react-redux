@@ -30,20 +30,10 @@ module.exports = {
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
-				commons: {
-					name: "commons",
-					chunks: 'initial',
-					minChunks: Infinity,
-					maxInitialRequests: 5,
-					minSize: 0
-				},
-				vendor: {
-					name: "vendor",
-					test: /node_modules/,
-					chunks: 'initial',
-					minChunks: Infinity,
-					maxInitialRequests: 5,
-					minSize: 0
+				vendors: {
+					test: /[\\/]node_modules[\\/]/,
+					priority: -10,
+					name:"vendors"
 				}
 			}
 		}

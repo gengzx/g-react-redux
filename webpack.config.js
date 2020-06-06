@@ -74,7 +74,14 @@ module.exports = {
 			, {
 				// 加载外其他文件
 				test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-				loader: 'url-loader?limit=2&name=images/[name].[ext]?[hash]'
+				//loader: 'url-loader?limit=2&name=images/[name].[ext]?[hash]'
+				use: [{loader: 'file-loader',
+					options: {
+						name: '[name].[ext]?[hash:8]',
+						publicPath: '../images',
+						outputPath: 'images'
+					}
+				}]
 			}, {
 				// 加载配置文件
 				test: /config.js/,

@@ -14,6 +14,17 @@ baseWebpackConfig.devServer = {
   inline: true,
   //quiet: true,   // important
   open: true
+  /*
+  proxy: {
+    '/gdis-admin': {
+      target: 'http://localhost:8080/gdis-admin',
+      changeOrigin: true,  //是否跨域
+      pathRewrite: {
+          '^/gdis-admin': ''   //需要rewrite重写的,
+      }
+    }*/
+  }
+
 }
 
 baseWebpackConfig.plugins.push(

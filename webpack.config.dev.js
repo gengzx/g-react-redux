@@ -22,8 +22,8 @@ baseWebpackConfig.devServer = {
       pathRewrite: {
           '^/gdis-admin': ''   //需要rewrite重写的,
       }
-    }*/
-  }
+    }
+  }*/
 
 }
 

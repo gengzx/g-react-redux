@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-//import './Sider.less';
+import './Sider.less';
 
 
 // 应用入口

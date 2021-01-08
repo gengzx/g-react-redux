@@ -39,6 +39,9 @@ class Header extends React.Component {
 		return (
             <div className={classNames("page-header")}>
        
+				<div>
+					title
+				</div>
 
             </div>
 		);

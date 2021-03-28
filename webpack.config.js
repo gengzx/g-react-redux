@@ -85,7 +85,8 @@ module.exports = {
 			}, {
 				// 加载配置文件
 				test: /config.js/,
-				loader: 'file-loader?name=script/[name].[ext]'
+				loader: 'file-loader?name=script/[name].[ext]',
+				exclude: /(node_modules|bower_components)/
 			}
 
 			/*

@@ -10,7 +10,7 @@ import { HashRouter as Router, Route, IndexRoute } from 'react-router-dom'
  
 import { LazyLoad } from '@/bundle';
 
-const Default = LazyLoad(require(`bundle-loader?lazy&name=[folder]!./views/default`))
+const Default = LazyLoad(require(`bundle-loader?lazy&name=[folder]!./views/Default`))
 
 //const Test = LazyLoad(require(`bundle-loader?lazy&name=[name]!./views/Create/Widget/Files`))
 

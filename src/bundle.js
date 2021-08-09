@@ -1,3 +1,11 @@
+
+/**
+ * @Description : 组件懒加载
+ * @Date : 2021/03/25 18:06:25
+ * @Author : gengzx gzx97620@126.com
+ * @Version :1.0
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 

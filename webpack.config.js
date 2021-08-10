@@ -87,6 +87,11 @@ module.exports = {
 				test: /config.js/,
 				loader: 'file-loader?name=script/[name].[ext]',
 				exclude: /(node_modules|bower_components)/
+			}, {
+				// 加载其他文件 也可用 CopyWebpackPlugin 实现
+				test: /iconfont.js/,
+				loader: 'file-loader?name=script/[name].[ext]',
+				exclude: /(node_modules|bower_components)/
 			}
 
 			/*
@@ -142,6 +147,7 @@ module.exports = {
 			components: path.join(__dirname, './src/components/'),
 			utils: path.join(__dirname, './src/utils'),
 			action: path.join(__dirname, './src/redux/modules'),
+			static: path.join(__dirname, './static/'),
 			//jquery: path.join(__dirname, './static/plugins/jquery.min.js')
 		}
 	},

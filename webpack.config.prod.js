@@ -10,7 +10,9 @@ const optimizeCss = require('optimize-css-assets-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 baseWebpackConfig.plugins.push(
-  new CleanWebpackPlugin(),
+  new CleanWebpackPlugin({
+    cleanOnceBeforeBuildPatterns: ['**/*', '!WEB-INF', '!WEB-INF/**/*', '!error.html']
+  }),
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: '"production"'

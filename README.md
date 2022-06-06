@@ -1,7 +1,7 @@
 ## 前端页面模板
 
 
-## 技术栈
+## 技术栈 1
 
 react + redux + react-router + webpack + ES6/7 + axios
 

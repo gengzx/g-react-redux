@@ -3,7 +3,7 @@
 
 ## 技术栈 1
 
-react + redux + react-router + webpack5 + ES6/7 + axios
+react + redux + react-router + webpack4 + ES6/7 + axios
 
 ## Develop
 
